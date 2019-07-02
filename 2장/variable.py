@@ -1,4 +1,5 @@
 import sys
+from copy import copy
 
 '''
 	변수란?
@@ -39,4 +40,39 @@ print(a)
 #두 변수의 값을 간단히 바꾸기 
 a = 3
 b = 5
+a,b = b,a
+print(a)
 print(b)
+
+#메모리에 생성된 변수 없애기
+
+a = 3
+b = 3
+del(a)
+del(b)
+
+#리스트를 변수에 넣고 복사하고자 할 때
+a = [1,2,3]
+b = a
+a[1] = 4
+print(a)
+print("---------------------")
+
+#b변수를 생성할 때 a와같은 값을 가지도록 복사해 넣으면서 a가 가리키는 리스트와는
+#다른 리스트를 가리케 하는 방법은? 2가지가 있다.
+# 1.[:] 이용하기 2. copy 모듈 이용
+a = [1,2,3]
+b = a[:]
+c = copy(a)
+a[1] = 4
+print(a)
+print(b)
+print(c)
+print("---------------------")
+
+#동일한 객체인지 확인해보기
+print(b is a)
+print(a is b)
+print(b is c)
+
+
