@@ -29,7 +29,7 @@ f.close()
 
 
 #readlines() 함수 이용하기
-#lines는 리스트타가 된다.
+#lines는 리스트가 된다.
 f = open("C:/Python_Study/새파일.txt","r")
 lines = f.readlines()
 for line in lines:
